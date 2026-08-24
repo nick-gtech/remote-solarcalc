@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Remote SolarCalc - Download</title>
+<style>
+  :root {
+    --bg: #f4f4f5;
+    --card: #ffffff;
+    --text: #1f2124;
+    --muted: #55595f;
+    --accent: #c62828;
+    --border: #d9dade;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 20px 64px;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 32px; }
+  h1 { margin: 0 0 6px; font-size: 34px; letter-spacing: -0.5px; }
+  .tagline { color: var(--muted); margin: 0; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px 26px;
+    margin-bottom: 20px;
+  }
+  h2 { font-size: 20px; margin: 0 0 12px; }
+  .release { display: flex; flex-wrap: wrap; gap: 12px 28px; margin: 0 0 20px; padding: 0; list-style: none; color: var(--muted); font-size: 15px; }
+  .release b { color: var(--text); font-weight: 600; }
+  .download {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 14px 34px;
+    border-radius: 26px;
+  }
+  .download:hover { background: #a51f1f; }
+  .dl-note { display: block; margin-top: 10px; color: var(--muted); font-size: 14px; }
+  ol, ul { margin: 0; padding-left: 22px; }
+  li { margin-bottom: 8px; }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 13px;
+    background: #ececed;
+    padding: 2px 5px;
+    border-radius: 4px;
+    word-break: break-all;
+  }
+  .checksum { font-size: 14px; color: var(--muted); }
+  footer { text-align: center; color: var(--muted); font-size: 14px; margin-top: 36px; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #17181b; --card: #202226; --text: #e9e9ec; --muted: #a3a7ad; --border: #33363b; }
+    code { background: #2b2e33; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Remote SolarCalc</h1>
+    <p class="tagline">Size off-grid solar power systems for remote telecom sites.</p>
+  </header>
+
+  <div class="card" style="text-align:center">
+    <ul class="release">
+      <li><b>Version</b> 1.0 (build 1)</li>
+      <li><b>Platform</b> Android 8.0 or newer</li>
+      <li><b>Size</b> 4.7 MB</li>
+      <li><b>Released</b> August 24, 2026</li>
+    </ul>
+    <a class="download" href="app-release.apk" download>Download APK</a>
+    <span class="dl-note">Signed release build. Android verifies the signature during installation.</span>
+  </div>
+
+  <div class="card">
+    <h2>About this application</h2>
+    <p>Remote SolarCalc is a native Android application that lets field engineers
+    size off-grid solar power systems for telecom towers and other remote network
+    equipment. Each site record stores its location, DC system voltage, and the
+    number of days the site must run without sun. Every site holds a list of the
+    electrical loads installed there, and each load records its power draw in watts
+    and its hours of use per day.</p>
+    <p>From those values the application totals the daily energy demand in
+    watt-hours and recommends both the solar array wattage and the battery bank
+    capacity in amp-hours. Engineers can search their saved sites by name or
+    location, and the reporting screen lists every site with its recommended solar
+    components under a title and a date and time stamp.</p>
+  </div>
+
+  <div class="card">
+    <h2>Installing on a device</h2>
+    <ol>
+      <li>Open this page on the Android phone or tablet and tap <b>Download APK</b>.</li>
+      <li>Android may warn that the file came from outside the Play Store. Allow
+      installs from this browser when prompted, which is found under
+      <b>Settings &rarr; Apps &rarr; Special app access &rarr; Install unknown apps</b>.</li>
+      <li>Open the downloaded file and tap <b>Install</b>. The installer checks the
+      release signature and refuses any modified copy of the file.</li>
+      <li>Launch <b>Remote SolarCalc</b> from the app drawer.</li>
+    </ol>
+    <p class="checksum">SHA-256 of <code>app-release.apk</code>:<br>
+    <code>a5adae427b0dd4c16433e3f038f00eddf16ebff7994121a27db515c000616880</code></p>
+  </div>
+
+  <div class="card">
+    <h2>First launch and sign in</h2>
+    <p>The application is protected by a sign-in screen, and passwords are stored
+    only as salted SHA-256 hashes on the device. No account is shipped with the
+    download. The first launch shows a <b>Create Account</b> button, so the first
+    person to open the app chooses their own username and password. Usernames need
+    at least three characters and passwords need at least six. After that, the same
+    screen signs the user in.</p>
+  </div>
+
+  <div class="card">
+    <h2>Release notes - version 1.0</h2>
+    <ul>
+      <li>Add, edit, and delete sites, each with a location, system voltage, and required days of autonomy.</li>
+      <li>Add, edit, and delete the equipment loads that belong to each site.</li>
+      <li>Solar sizing that recommends array wattage, panel count, and battery bank capacity.</li>
+      <li>Site search by name or location.</li>
+      <li>Sizing report with a title, a generated date and time stamp, and one row per site.</li>
+      <li>Sign-in screen with salted and hashed password storage.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Support</h2>
+    <p>Installation problems and defect reports are tracked on the project issue
+    board in the source repository. Each report should include the device model,
+    the Android version, and the steps that produced the problem.</p>
+  </div>
+
+  <footer>
+    Remote SolarCalc 1.0 &middot; Nick Griesemer &middot; WGU D424 Software Engineering Capstone
+  </footer>
+
+</div>
+</body>
+</html>
